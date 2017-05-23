@@ -35,12 +35,15 @@ module Dradis::Plugins::Appscan
       asmnt_files.each do |asmnt_file|
         findings = asmnt_file.xpath('Finding[not(@excluded)]')
         findings.to_a.uniq { |f| f[:data_id] }.each do |finding|
-          evidence_data = get_evidence_data(
-            asmnt_file[:file_id], finding[:data_id]
-          )
+          finding_data  = finding_data_xpath(finding[:data_id])
+          vulnerability = string_xpath(finding_data[:vtype])
+          site          = site_xpath(finding_data[:site_id])
+          file          = file_xpath(asmnt_file[:file_id])
 
-          process_vulnerability(evidence_data[:description])
+          process_vulnerability(vulnerability)
 
+          evidence_data =
+            get_evidence_data(vulnerability, site, file)
           process_finding(evidence_data)
         end
       end
@@ -51,26 +54,15 @@ module Dradis::Plugins::Appscan
     private
 
     # Extract all info that will be used to create an evidence
-    # Also the :description field in this info will be used to create an issue
-    def get_evidence_data(file_id, finding_id)
-      finding_data = @assessment_run.at_xpath(
-        "FindingDataPool/FindingData[@id='#{finding_id}']"
-      )
-      site = @assessment_run.at_xpath(
-        "SitePool/Site[@id='#{finding_data[:site_id]}']"
-      )
-      file = @assessment_run.at_xpath(
-        "FilePool/File[@id='#{file_id}']"
-      )
-
+    def get_evidence_data(vulnerability, site, file)
       {
-        description: string_value(finding_data[:vtype]),
+        description: vulnerability[:value],
         file: file[:value],
         line: site[:ln],
         column: site[:cn],
-        method: string_value(site[:method]),
-        caller: string_value(site[:caller]),
-        context: string_value(site[:cxt])
+        method: string_xpath(site[:method])[:value],
+        caller: string_xpath(site[:caller])[:value],
+        context: string_xpath(site[:cxt])[:value]
       }
     end
 
@@ -91,20 +83,37 @@ module Dradis::Plugins::Appscan
     # Returns issue with that description (vulnerability)
     # If the issue doesn't exist yet, create it
     def process_vulnerability(vulnerability)
-      issue = @issues[vulnerability]
+      issue = @issues[vulnerability[:value]]
       return unless issue.nil?
 
       issue_text = template_service.process_template(
         template: 'issue',
-        data: { description: vulnerability }
+        data: vulnerability
       )
-      issue = content_service.create_issue(text: issue_text, id: vulnerability)
-      @issues[vulnerability] = issue
-      logger.info { "Added vulnerability #{vulnerability}" }
+      issue = content_service.create_issue(
+        text: issue_text,
+        id: vulnerability[:value]
+      )
+      @issues[vulnerability[:value]] = issue
+      logger.info { "Added vulnerability #{vulnerability[:value]}" }
     end
 
-    def string_value(id)
-      @assessment_run.at_xpath("StringPool/String[@id='#{id}']")[:value]
+    def file_xpath(file_id)
+      @assessment_run.at_xpath("FilePool/File[@id='#{file_id}']")
+    end
+
+    def finding_data_xpath(finding_id)
+      @assessment_run.at_xpath(
+        "FindingDataPool/FindingData[@id='#{finding_id}']"
+      )
+    end
+
+    def site_xpath(site_id)
+      @assessment_run.at_xpath("SitePool/Site[@id='#{site_id}']")
+    end
+
+    def string_xpath(id)
+      @assessment_run.at_xpath("StringPool/String[@id='#{id}']")
     end
   end
 end
