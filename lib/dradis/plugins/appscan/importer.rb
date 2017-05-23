@@ -33,18 +33,11 @@ module Dradis::Plugins::Appscan
 
       asmnt_files = @assessment_run.xpath('Assessment/Assessment/AsmntFile')
       asmnt_files.each do |asmnt_file|
-        findings = asmnt_file.xpath('Finding')
-        already_processed = []
-        findings.each do |finding|
-          next if finding[:exclude] == 'true'
-
-          # we found a .ozasmt example with duplicated data_id's,
-          # we make sure to process unique data_id's per file
-          finding_id = finding[:data_id]
-          next if already_processed.include?(finding_id)
-          already_processed << finding_id
-
-          evidence_data = get_evidence_data(asmnt_file[:file_id], finding_id)
+        findings = asmnt_file.xpath('Finding[not(@excluded)]')
+        findings.to_a.uniq { |f| f[:data_id] }.each do |finding|
+          evidence_data = get_evidence_data(
+            asmnt_file[:file_id], finding[:data_id]
+          )
 
           process_vulnerability(evidence_data[:description])
 
