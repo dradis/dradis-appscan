@@ -1,16 +1,16 @@
 class AppscanTasks < Thor
-	include Rails.application.config.dradis.thor_helper_module
+  include Rails.application.config.dradis.thor_helper_module
 
-  namespace "dradis:plugins:appscan"
+  namespace 'dradis:plugins:appscan'
 
-  desc "upload FILE", "upload Appscan Source ozasmt (XML) file"
+  desc 'upload FILE', 'upload Appscan Source ozasmt (XML) file'
   def upload(file_path)
     require 'config/environment'
 
     logger = Logger.new(STDOUT)
     logger.level = Logger::DEBUG
 
-    unless File.exists?(file_path)
+    unless File.exist?(file_path)
       $stderr.puts "** the file [#{file_path}] does not exist"
       exit(-1)
     end
