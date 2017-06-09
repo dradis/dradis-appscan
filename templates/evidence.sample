@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentRun name="SummitDemo - 2/16/15 11:55AM" version="9.0.0.1">
+	<AssessmentStats class_total="4" date="1424105747" duration="0" error_status="0" language_type="17" line_total="619" max_vdensity="4298.869144" max_vkloc="38.772213" method_total="27" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" total_excluded_findings="0" total_files="7" total_findings="25" total_high_finding="17" total_high_high_finding="1" total_high_low_finding="0" total_high_med_finding="16" total_low_finding="1" total_low_high_finding="1" total_low_low_finding="0" total_low_med_finding="0" total_med_finding="6" total_med_high_finding="0" total_med_low_finding="1" total_med_med_finding="5" vdensity="4298.869144" vkloc="38.772213">
+		<VulnType name="Vulnerability.Injection.SQL" total_high_finding="0" total_low_finding="0" total_med_finding="4"/>
+	</AssessmentStats>
+	<AssessmentConfig analysis_type="2" assessment_type="1" stop_on_error="false">
+		<ScanConfig description_id="msg.scanconfig.normal.description" identifier="Normal" is_added="false" is_shared="true" name_id="msg.scanconfig.normal.name">
+		</ScanConfig>
+		<Application name="SummitDemo" path="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\SummitDemo.paf"/>
+	</AssessmentConfig>
+	<SharedDataStats total_objects="140"/>
+	<StringPool>
+		<String id="23" value="Vulnerability.Injection.SQL"/>
+		<String id="28" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.checkGuess():java.lang.String"/>
+		<String id="54" value="java.sql.Statement.executeQuery"/>
+		<String id="65" value="stmt . java.sql.Statement.executeQuery ( com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber() )"/>
+	</StringPool>
+	<FilePool>
+		<File id="4" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\NumberBean.java"/>
+	</FilePool>
+	<SitePool>
+		<Site caller="28" cn="53" cxt="65" file_id="4" id="26" language_type="2" ln="51" method="54" ord="1" sig="55"/>
+	</SitePool>
+	<TaintPool>
+	</TaintPool>
+	<FindingDataPool>
+		<FindingData ao_id="465072" conf="2" id="9" project_name="64" prop_ids="3,537,538,540,546,548,592,605" rec_id="514704" sev="0" site_id="26" vtype="23"/>
+	</FindingDataPool>
+	<Assessment assessee_file="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\SummitDemo.paf" assessee_name="SummitDemo" assessee_type="Application">
+		<AssessmentStats class_total="4" date="1424105747" duration="0" error_status="0" language_type="17" line_total="619" max_vdensity="4298.869144" method_total="27" owner_name="SummitDemo" owner_type="Application" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" vdensity="4298.869144"/>
+		<AssessmentOperations>
+		</AssessmentOperations>
+		<Assessment assessee_file="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot.ppf" assessee_name="srcRoot" assessee_type="Project">
+			<AssessmentStats class_total="4" configuration="Configuration 1" date="1424105747" duration="36" error_status="0" language_type="17" line_total="619" max_vdensity="38970.149254" method_total="27" owner_name="srcRoot" owner_type="Project" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" vdensity="4298.869144"/>
+			<AssessmentOperations>
+			</AssessmentOperations>
+			<AsmntFile file_id="4">
+				<AssessmentStats class_total="1" date="1424105747" duration="0" error_status="0" language_type="2" line_total="66" method_total="5" total_call_sites="44" total_call_sites_informational="0" total_call_sites_not_vulnerable="20" vdensity="38970.149254"/>
+				<Finding data_id="9" />
+			</AsmntFile>
+		</Assessment>
+	</Assessment>
+	<Messages>
+	</Messages>
+	<MetricsFindings>
+	</MetricsFindings>
+</AssessmentRun>

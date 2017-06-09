@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssessmentRun name="SummitDemo - 2/16/15 11:55AM" version="9.0.0.1">
+	<AssessmentStats class_total="4" date="1424105747" duration="0" error_status="0" language_type="17" line_total="619" max_vdensity="4298.869144" max_vkloc="38.772213" method_total="27" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" total_excluded_findings="0" total_files="7" total_findings="25" total_high_finding="17" total_high_high_finding="1" total_high_low_finding="0" total_high_med_finding="16" total_low_finding="1" total_low_high_finding="1" total_low_low_finding="0" total_low_med_finding="0" total_med_finding="6" total_med_high_finding="0" total_med_low_finding="1" total_med_med_finding="5" vdensity="4298.869144" vkloc="38.772213">
+		<VulnType name="Vulnerability.Authentication.Entity" total_high_finding="1" total_low_finding="0" total_med_finding="0"/>
+		<VulnType name="Vulnerability.CrossSiteScripting" total_high_finding="0" total_low_finding="0" total_med_finding="5"/>
+		<VulnType name="Vulnerability.Cryptography.PoorEntropy" total_high_finding="0" total_low_finding="1" total_med_finding="0"/>
+		<VulnType name="Vulnerability.ErrorHandling.RevealDetails.StackTrace" total_high_finding="1" total_low_finding="0" total_med_finding="0"/>
+		<VulnType name="Vulnerability.Injection.OS" total_high_finding="0" total_low_finding="0" total_med_finding="12"/>
+		<VulnType name="Vulnerability.Injection.SQL" total_high_finding="0" total_low_finding="0" total_med_finding="4"/>
+		<VulnType name="Vulnerability.Quality.TestCode" total_high_finding="0" total_low_finding="1" total_med_finding="0"/>
+	</AssessmentStats>
+	<AssessmentConfig analysis_type="2" assessment_type="1" stop_on_error="false">
+		<ScanConfig description_id="msg.scanconfig.normal.description" identifier="Normal" is_added="false" is_shared="true" name_id="msg.scanconfig.normal.name">
+		</ScanConfig>
+		<Application name="SummitDemo" path="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\SummitDemo.paf"/>
+	</AssessmentConfig>
+	<SharedDataStats total_objects="140"/>
+	<StringPool>
+		<String id="1"/>
+		<String id="2" value="&lt;external_caller&gt;"/>
+		<String id="3" value="&lt;external_caller&gt;():void"/>
+		<String id="4" value="AppScan.Synthetic.JSF"/>
+		<String id="5" value="AppScan.Synthetic.JSF._index_xhtml"/>
+		<String id="6" value="AppScan.Synthetic.JSF._index_xhtml ( wafl_formal_0, wafl_formal_1 )"/>
+		<String id="7" value="AppScan.Synthetic.JSF._index_xhtml(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse):void"/>
+		<String id="8" value="AppScan.Synthetic.JSF._inputnumber_jsp"/>
+		<String id="9" value="AppScan.Synthetic.JSF._inputnumber_jsp ( wafl_formal_0, wafl_formal_1 )"/>
+		<String id="10" value="AppScan.Synthetic.JSF._inputnumber_jsp(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse):void"/>
+		<String id="11" value="AppScan.Synthetic.JSF._success_jsp"/>
+		<String id="12" value="AppScan.Synthetic.JSF._success_jsp ( wafl_formal_0, wafl_formal_1 )"/>
+		<String id="13" value="AppScan.Synthetic.JSF._success_jsp(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse):void"/>
+		<String id="14" value="Session_numberBean . com.aspectsecurity.automation.frameworkSamples.NumberBean.checkGuess ()"/>
+		<String id="15" value="Session_numberBean . com.aspectsecurity.automation.frameworkSamples.NumberBean.setUserNumber ( wafl_local_0 . javax.servlet.ServletRequest.getParameter(&quot;userNumber&quot;) )"/>
+		<String id="16" value="Special Formal"/>
+		<String id="17" value="System.out . java.io.PrintStream.println ( new java.lang.StringBuilder . java.lang.StringBuilder.append(&quot;Random number: &quot;) . java.lang.StringBuilder.append(this.randomNumber) . java.lang.StringBuilder.toString() )"/>
+		<String id="18" value="Vulnerability.Authentication.Entity"/>
+		<String id="19" value="Vulnerability.CrossSiteScripting"/>
+		<String id="20" value="Vulnerability.Cryptography.PoorEntropy"/>
+		<String id="21" value="Vulnerability.ErrorHandling.RevealDetails.StackTrace"/>
+		<String id="22" value="Vulnerability.Injection.OS"/>
+		<String id="23" value="Vulnerability.Injection.SQL"/>
+		<String id="24" value="Vulnerability.Quality.TestCode"/>
+		<String id="25" value="com.aspectsecurity.automation.frameworkSamples.NumberBean"/>
+		<String id="26" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.&lt;init&gt;():void"/>
+		<String id="27" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.checkGuess"/>
+		<String id="28" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.checkGuess():java.lang.String"/>
+		<String id="29" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber"/>
+		<String id="30" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber():java.lang.String"/>
+		<String id="31" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.setUserNumber"/>
+		<String id="32" value="com.aspectsecurity.automation.frameworkSamples.NumberBean.setUserNumber(java.lang.String):void"/>
+		<String id="33" value="e . java.lang.Throwable.printStackTrace ()"/>
+		<String id="34" value="getUserNumber()"/>
+		<String id="35" value="java.io.PrintStream"/>
+		<String id="36" value="java.io.PrintStream.println"/>
+		<String id="37" value="java.io.PrintStream.println(java.lang.String):void"/>
+		<String id="38" value="java.io.Writer"/>
+		<String id="39" value="java.io.Writer.write"/>
+		<String id="40" value="java.io.Writer.write(java.lang.String):void"/>
+		<String id="41" value="java.lang.Exception"/>
+		<String id="42" value="java.lang.Math.random"/>
+		<String id="43" value="java.lang.Math.random ()"/>
+		<String id="44" value="java.lang.Math.random():double"/>
+		<String id="45" value="java.lang.Runtime"/>
+		<String id="46" value="java.lang.Runtime.exec"/>
+		<String id="47" value="java.lang.Runtime.exec(java.lang.String):java.lang.Process"/>
+		<String id="48" value="java.lang.Throwable.printStackTrace"/>
+		<String id="49" value="java.lang.Throwable.printStackTrace():void"/>
+		<String id="50" value="java.sql.DriverManager.getConnection"/>
+		<String id="51" value="java.sql.DriverManager.getConnection ( &quot;jdbc:myDriver:thisDBDoesNotExist&quot;, &quot;hardcodedUsername&quot;, &quot;hardcodedPassword&quot; )"/>
+		<String id="52" value="java.sql.DriverManager.getConnection(java.lang.String;java.lang.String;java.lang.String):java.sql.Connection"/>
+		<String id="53" value="java.sql.Statement"/>
+		<String id="54" value="java.sql.Statement.executeQuery"/>
+		<String id="55" value="java.sql.Statement.executeQuery(java.lang.String):java.sql.ResultSet"/>
+		<String id="56" value="javax.servlet.ServletRequest"/>
+		<String id="57" value="javax.servlet.ServletRequest.getParameter"/>
+		<String id="58" value="javax.servlet.ServletRequest.getParameter(java.lang.String):java.lang.String"/>
+		<String id="59" value="local0"/>
+		<String id="60" value="local0 = Session_numberBean . com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber ()"/>
+		<String id="61" value="local1 . java.io.Writer.write ( local0 )"/>
+		<String id="62" value="r . java.lang.Runtime.exec ( com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber() )"/>
+		<String id="63" value="return value"/>
+		<String id="64" value="srcRoot"/>
+		<String id="65" value="stmt . java.sql.Statement.executeQuery ( com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber() )"/>
+		<String id="66" value="this . com.aspectsecurity.automation.frameworkSamples.NumberBean.getUserNumber ()"/>
+		<String id="67" value="userNumber"/>
+		<String id="68" value="wafl_local_0 . getParameter(&quot;userNumber&quot;)"/>
+		<String id="69" value="wafl_local_0 . javax.servlet.ServletRequest.getParameter ( &quot;userNumber&quot; )"/>
+	</StringPool>
+	<FilePool>
+		<File id="1"/>
+		<File id="2" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot_frameworksCLI.wafl"/>
+		<File id="3" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\HelloWorld.java"/>
+		<File id="4" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\NumberBean.java"/>
+		<File id="5" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\beans.xml"/>
+		<File id="6" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\faces-config.xml"/>
+		<File id="7" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\web.xml"/>
+		<File id="8" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\index.xhtml"/>
+		<File id="9" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\inputnumber.jsp"/>
+		<File id="10" value="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\success.jsp"/>
+	</FilePool>
+	<SitePool>
+		<Site caller="1" cn="1" cxt="1" file_id="8" id="1" language_type="2" ln="0" method="2" ord="1" sig="3"/>
+		<Site caller="1" cn="1" cxt="1" file_id="9" id="2" language_type="2" ln="0" method="2" ord="1" sig="3"/>
+		<Site caller="3" cn="4" cxt="6" file_id="8" id="3" language_type="2" ln="0" method="5" ord="1" sig="7"/>
+		<Site caller="7" cn="4" col="22" cxt="9" file_id="6" id="4" language_type="2" ln="17" method="8" ord="1" sig="10"/>
+		<Site caller="13" cn="4" col="22" cxt="9" file_id="6" id="5" language_type="2" ln="17" method="8" ord="1" sig="10"/>
+		<Site caller="3" cn="4" cxt="9" file_id="9" id="6" language_type="2" ln="0" method="8" ord="1" sig="10"/>
+		<Site caller="1" cn="4" col="73" cxt="1" file_id="9" id="7" language_type="2" ln="14" method="8" ord="1" sig="10"/>
+		<Site caller="10" cn="4" col="22" cxt="12" file_id="6" id="8" language_type="2" ln="9" method="11" ord="1" sig="13"/>
+		<Site caller="1" cn="4" col="22" cxt="1" file_id="6" id="9" language_type="2" ln="17" method="11" ord="1" sig="13"/>
+		<Site caller="3" cn="4" cxt="12" file_id="10" id="10" language_type="2" ln="0" method="11" ord="1" sig="13"/>
+		<Site caller="10" cn="25" col="77" cxt="14" file_id="9" id="11" language_type="2" ln="17" method="27" ord="1" sig="28"/>
+		<Site caller="28" cn="25" cxt="66" file_id="4" id="12" language_type="2" ln="43" method="29" ord="1" sig="30"/>
+		<Site caller="28" cn="25" cxt="66" file_id="4" id="13" language_type="2" ln="51" method="29" ord="2" sig="30"/>
+		<Site caller="28" cn="25" cxt="66" file_id="4" id="14" language_type="2" ln="54" method="29" ord="3" sig="30"/>
+		<Site caller="28" cn="25" cxt="66" file_id="4" id="15" language_type="2" ln="55" method="29" ord="4" sig="30"/>
+		<Site caller="13" cn="25" col="67" cxt="60" file_id="10" id="16" language_type="2" ln="9" method="29" ord="1" sig="30"/>
+		<Site caller="10" cn="25" col="73" cxt="15" file_id="9" id="17" language_type="2" ln="14" method="31" ord="1" sig="32"/>
+		<Site caller="26" cn="35" cxt="17" file_id="4" id="18" language_type="2" ln="21" method="36" ord="1" sig="37"/>
+		<Site caller="13" cn="38" col="67" cxt="61" file_id="10" id="19" language_type="2" ln="9" method="39" ord="1" sig="40"/>
+		<Site caller="26" cn="1" cxt="43" file_id="4" id="20" language_type="2" ln="20" method="42" ord="1" sig="44"/>
+		<Site caller="28" cn="45" cxt="62" file_id="4" id="21" language_type="2" ln="43" method="46" ord="1" sig="47"/>
+		<Site caller="28" cn="45" cxt="62" file_id="4" id="22" language_type="2" ln="54" method="46" ord="2" sig="47"/>
+		<Site caller="28" cn="45" cxt="62" file_id="4" id="23" language_type="2" ln="55" method="46" ord="3" sig="47"/>
+		<Site caller="28" cn="41" cxt="33" file_id="4" id="24" language_type="2" ln="58" method="48" ord="1" sig="49"/>
+		<Site caller="28" cn="1" cxt="51" file_id="4" id="25" language_type="2" ln="45" method="50" ord="1" sig="52"/>
+		<Site caller="28" cn="53" cxt="65" file_id="4" id="26" language_type="2" ln="51" method="54" ord="1" sig="55"/>
+		<Site caller="10" cn="56" col="73" cxt="69" entity_name="67" entity_type="4" file_id="9" id="27" language_type="2" ln="14" method="57" ord="1" sig="58"/>
+	</SitePool>
+	<TaintPool>
+		<Taint arg="-1" arg_name="1" dir="0" id="1" site_id="1" trace_type="1"/>
+		<Taint arg="-1" arg_name="1" dir="0" id="2" site_id="2" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="1" id="3" site_id="3" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="1" id="4" site_id="4" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="1" id="5" site_id="5" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="6" site_id="5" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="1" id="7" site_id="6" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="8" site_id="6" trace_type="6"/>
+		<Taint arg="-1" arg_name="1" dir="0" id="9" site_id="7" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="10" site_id="8" trace_type="6"/>
+		<Taint arg="-1" arg_name="1" dir="0" id="11" site_id="9" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="12" site_id="10" trace_type="6"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="13" site_id="11" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="14" site_id="12" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="15" site_id="13" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="16" site_id="14" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="17" site_id="15" trace_type="1"/>
+		<Taint arg="-1" arg_name="16" dir="2" id="18" site_id="16" trace_type="1"/>
+		<Taint arg="2" arg_name="68" dir="2" id="19" site_id="17" trace_type="1"/>
+		<Taint arg="2" arg_name="59" dir="2" id="20" site_id="19" trace_type="3"/>
+		<Taint arg="2" arg_name="34" dir="2" id="21" site_id="21" trace_type="3"/>
+		<Taint arg="2" arg_name="34" dir="2" id="22" site_id="22" trace_type="3"/>
+		<Taint arg="2" arg_name="34" dir="2" id="23" site_id="23" trace_type="3"/>
+		<Taint arg="2" arg_name="34" dir="2" id="24" site_id="26" trace_type="3"/>
+		<Taint arg="0" arg_name="63" dir="1" id="25" site_id="27" trace_type="2"/>
+	</TaintPool>
+	<FindingDataPool>
+		<FindingData ao_id="461554" conf="3" id="1" project_name="64" prop_ids="3,540,583,605,612" rec_id="512033" sev="2" site_id="18" vtype="24"/>
+		<FindingData ao_id="496448" conf="2" id="2" project_name="64" prop_ids="605,845" rec_id="512216" sev="1" site_id="19" vtype="19"/>
+		<FindingData ao_id="12944" conf="3" id="3" project_name="64" prop_ids="3,542,556,605,614,637" rec_id="512317" sev="1" site_id="20" vtype="20"/>
+		<FindingData ao_id="65189" conf="2" id="4" project_name="64" prop_ids="3,540,558,587,605" rec_id="512330" sev="0" site_id="21" vtype="22"/>
+		<FindingData ao_id="65189" conf="2" id="5" project_name="64" prop_ids="3,540,558,587,605" rec_id="512330" sev="0" site_id="22" vtype="22"/>
+		<FindingData ao_id="65189" conf="2" id="6" project_name="64" prop_ids="3,540,558,587,605" rec_id="512330" sev="0" site_id="23" vtype="22"/>
+		<FindingData ao_id="95971" conf="1" id="7" project_name="64" prop_ids="3,553,588,605" rec_id="512501" sev="2" site_id="24" vtype="21"/>
+		<FindingData ao_id="462225" conf="1" id="8" project_name="64" prop_ids="3,542,546,595,605,912,1037" rec_id="514415" sev="0" site_id="25" vtype="18"/>
+		<FindingData ao_id="465072" conf="2" id="9" project_name="64" prop_ids="3,537,538,540,546,548,592,605" rec_id="514704" sev="0" site_id="26" vtype="23"/>
+	</FindingDataPool>
+	<Assessment assessee_file="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\SummitDemo.paf" assessee_name="SummitDemo" assessee_type="Application">
+		<AssessmentStats class_total="4" date="1424105747" duration="0" error_status="0" language_type="17" line_total="619" max_vdensity="4298.869144" method_total="27" owner_name="SummitDemo" owner_type="Application" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" vdensity="4298.869144"/>
+		<AssessmentOperations>
+		</AssessmentOperations>
+		<Assessment assessee_file="C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot.ppf" assessee_name="srcRoot" assessee_type="Project">
+			<AssessmentStats class_total="4" configuration="Configuration 1" date="1424105747" duration="36" error_status="0" language_type="17" line_total="619" max_vdensity="38970.149254" method_total="27" owner_name="srcRoot" owner_type="Project" total_call_sites="343" total_call_sites_informational="0" total_call_sites_not_vulnerable="38" vdensity="4298.869144"/>
+			<AssessmentOperations>
+			</AssessmentOperations>
+			<AsmntFile file_id="2">
+				<AssessmentStats class_total="0" date="1424105747" duration="0" error_status="0" language_type="2" line_total="0" method_total="0" total_call_sites="0" total_call_sites_informational="0" total_call_sites_not_vulnerable="0" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="3">
+				<AssessmentStats class_total="1" date="1424105747" duration="0" error_status="0" language_type="2" line_total="11" method_total="2" total_call_sites="2" total_call_sites_informational="0" total_call_sites_not_vulnerable="0" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="4">
+				<AssessmentStats class_total="1" date="1424105747" duration="0" error_status="0" language_type="2" line_total="66" method_total="5" total_call_sites="44" total_call_sites_informational="0" total_call_sites_not_vulnerable="20" vdensity="38970.149254"/>
+				<Finding data_id="1"/>
+				<Finding data_id="3"/>
+				<Finding data_id="4" trace="1,3,4,25.,19...,8,13,14.,21..."/>
+				<Finding data_id="4" trace="1,3,4,25.,19...,12,6,13,14.,21...."/>
+				<Finding data_id="4" trace="2,7,25.,19..,12,6,13,14.,21...."/>
+				<Finding data_id="4" trace="9,25.,19.,13,14.,21.."/>
+				<Finding data_id="5" trace="1,3,4,25.,19...,8,13,16.,22..."/>
+				<Finding data_id="5" trace="1,3,4,25.,19...,12,6,13,16.,22...."/>
+				<Finding data_id="5" trace="2,7,25.,19..,12,6,13,16.,22...."/>
+				<Finding data_id="5" trace="9,25.,19.,13,16.,22.."/>
+				<Finding data_id="6" trace="1,3,4,25.,19...,8,13,17.,23..."/>
+				<Finding data_id="6" trace="1,3,4,25.,19...,12,6,13,17.,23...."/>
+				<Finding data_id="6" excluded="true" trace="2,7,25.,19..,12,6,13,17.,23...."/>
+				<Finding data_id="6" trace="9,25.,19.,13,17.,23.."/>
+				<Finding data_id="7"/>
+				<Finding data_id="8"/>
+				<Finding data_id="9" trace="1,3,4,25.,19...,8,13,15.,24..."/>
+				<Finding data_id="9" trace="1,3,4,25.,19...,12,6,13,15.,24...."/>
+				<Finding data_id="9" trace="2,7,25.,19..,12,6,13,15.,24...."/>
+				<Finding data_id="9" trace="9,25.,19.,13,15.,24.."/>
+			</AsmntFile>
+			<AsmntFile file_id="5">
+				<AssessmentStats class_total="0" date="0" duration="0" error_status="0" language_type="17" line_total="10" method_total="0" total_call_sites="0" total_call_sites_informational="0" total_call_sites_not_vulnerable="0" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="6">
+				<AssessmentStats class_total="0" date="1424105747" duration="0" error_status="0" language_type="2" line_total="29" method_total="0" total_call_sites="7" total_call_sites_informational="0" total_call_sites_not_vulnerable="0" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="7">
+				<AssessmentStats class_total="0" date="0" duration="0" error_status="0" language_type="17" line_total="37" method_total="0" total_call_sites="0" total_call_sites_informational="0" total_call_sites_not_vulnerable="0" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="8">
+				<AssessmentStats class_total="0" date="1424105747" duration="0" error_status="0" language_type="2" line_total="0" method_total="0" total_call_sites="5" total_call_sites_informational="0" total_call_sites_not_vulnerable="1" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="9">
+				<AssessmentStats class_total="1" date="1424105747" duration="0" error_status="0" language_type="2" line_total="240" method_total="10" total_call_sites="143" total_call_sites_informational="0" total_call_sites_not_vulnerable="8" vdensity="0.000000"/>
+			</AsmntFile>
+			<AsmntFile file_id="10">
+				<AssessmentStats class_total="1" date="1424105747" duration="0" error_status="0" language_type="2" line_total="226" method_total="10" total_call_sites="142" total_call_sites_informational="0" total_call_sites_not_vulnerable="9" vdensity="3125.000000"/>
+				<Finding data_id="2" excluded="true" trace="1,3,4,25.,19...,8,10,18.,20..."/>
+				<Finding data_id="2" trace="1,3,4,25.,19...,12,18.,20.."/>
+				<Finding data_id="2" trace="2,7,25.,19..,12,18.,20.."/>
+				<Finding data_id="2" trace="9,25.,19.,10,18.,20.."/>
+				<Finding data_id="2" trace="11,5,25.,19..,18.,20."/>
+			</AsmntFile>
+		</Assessment>
+	</Assessment>
+	<Messages>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus">New scan started</Message>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus">Scanning with Scan Configuration: Normal scan</Message>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus">Scanning with cross-project analysis disabled</Message>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus"></Message>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus">Scanning Project srcRoot ( 1 of 1 )</Message>
+		<Message timestamp="02/16/15 11:55:47" type="AssessmentStatus">Preparing project for scan...</Message>
+		<Message timestamp="02/16/15 11:55:49" type="AssessmentStatus">Preparing source root &quot;C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\&quot; (1 of 1)</Message>
+		<Message timestamp="02/16/15 11:55:51" type="AssessmentStatus">Compiling 2 source files to C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot_staging\WEB-INF\classes</Message>
+		<Message timestamp="02/16/15 11:55:55" type="AssessmentStatus">Compiling 2 jsp files to C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot_staging\WEB-INF\classes\srcRoot</Message>
+		<Message timestamp="02/16/15 11:56:04" type="AssessmentStatus">Performing Framework Analysis for setting 'frameworksCLI'...</Message>
+		<Message timestamp="02/16/15 11:56:28" type="AssessmentStatus">Scanning C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\HelloWorld.java (1 of 4)</Message>
+		<Message timestamp="02/16/15 11:56:31" type="AssessmentStatus">Scanning C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\NumberBean.java (2 of 4)</Message>
+		<Message timestamp="02/16/15 11:56:31" type="AssessmentStatus">Scanning C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\inputnumber.jsp (3 of 4)</Message>
+		<Message timestamp="02/16/15 11:56:34" type="AssessmentStatus">Scanning C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\success.jsp (4 of 4)</Message>
+		<Message timestamp="02/16/15 11:56:36" type="Info">Framework analysis finished: C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\srcRoot_frameworksCLI.wafl</Message>
+		<Message timestamp="02/16/15 11:56:36" type="AssessmentStatus">Preparing for Vulnerability Analysis...</Message>
+		<Message timestamp="02/16/15 11:56:36" type="AssessmentStatus">Performing Vulnerability Analysis...</Message>
+		<Message timestamp="02/16/15 11:56:37" type="AssessmentStatus">Generating Findings...</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Preparing project for scan...</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\HelloWorld.java (1 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\src\main\java\com\aspectsecurity\automation\frameworkSamples\NumberBean.java (2 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\beans.xml (3 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\faces-config.xml (4 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\WEB-INF\web.xml (5 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\inputnumber.jsp (6 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:38" type="AssessmentStatus">Searching C:\Program Files (x86)\Jenkins\jobs\SummitDemo\workspace\target\jsf2Sample-1.0-SNAPSHOT\success.jsp (7 of 7)</Message>
+		<Message timestamp="02/16/15 11:56:42" type="AssessmentStatus">Scanned project srcRoot : Total files: 7 Total findings: 25 Total lines: 619 vkloc: 38.772213 v-density: 4298.869144</Message>
+		<Message timestamp="02/16/15 11:56:42" type="AssessmentStatus">Scanned application SummitDemo : Total files: 7 Total findings: 25 Total lines: 619 vkloc: 38.772213 v-density: 4298.869144</Message>
+		<Message timestamp="02/16/15 11:56:42" type="AssessmentStatus">Scan completed: Total files: 7 Total findings: 25 Total lines: 619 vkloc: 38.772213 v-density: 4298.869144</Message>
+		<Message timestamp="02/16/15 11:56:42" type="AssessmentStatus">Elapsed Time - 0 Hour(s) 0 Minute(s) 55 Second(s)</Message>
+	</Messages>
+	<MetricsFindings>
+	</MetricsFindings>
+</AssessmentRun>
